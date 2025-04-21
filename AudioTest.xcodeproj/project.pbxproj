@@ -14,6 +14,12 @@
 		89725E502DB56CB8009EB095 /* AudioTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89725E4F2DB56CB8009EB095 /* AudioTestTests.swift */; };
 		89725E5A2DB56CB8009EB095 /* AudioTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89725E592DB56CB8009EB095 /* AudioTestUITests.swift */; };
 		89725E5C2DB56CB8009EB095 /* AudioTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89725E5B2DB56CB8009EB095 /* AudioTestUITestsLaunchTests.swift */; };
+		89725E6B2DB56F8B009EB095 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E6A2DB56F8B009EB095 /* AudioKit */; };
+		89725E6F2DB5709C009EB095 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E6E2DB5709C009EB095 /* AudioKitEX */; };
+		89725E712DB5709C009EB095 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E702DB5709C009EB095 /* SoundpipeAudioKit */; };
+		89D65D4B2DB5C28D002D2859 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D482DB5C28D002D2859 /* Knob.swift */; };
+		89D65D4D2DB5D9EC002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D4C2DB5D9EC002D2859 /* Theme.swift */; };
+		89D65D512DB5E0FE002D2859 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D502DB5E0FE002D2859 /* Fader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,9 @@
 		89725E552DB56CB8009EB095 /* AudioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89725E592DB56CB8009EB095 /* AudioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTestUITests.swift; sourceTree = "<group>"; };
 		89725E5B2DB56CB8009EB095 /* AudioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		89D65D482DB5C28D002D2859 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		89D65D4C2DB5D9EC002D2859 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		89D65D502DB5E0FE002D2859 /* Fader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89725E6B2DB56F8B009EB095 /* AudioKit in Frameworks */,
+				89725E6F2DB5709C009EB095 /* AudioKitEX in Frameworks */,
+				89725E712DB5709C009EB095 /* SoundpipeAudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,7 @@
 				89725E4E2DB56CB8009EB095 /* AudioTestTests */,
 				89725E582DB56CB8009EB095 /* AudioTestUITests */,
 				89725E3C2DB56CB7009EB095 /* Products */,
+				89725E692DB56F8B009EB095 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +107,10 @@
 		89725E3D2DB56CB7009EB095 /* AudioTest */ = {
 			isa = PBXGroup;
 			children = (
+				89D65D4A2DB5C28D002D2859 /* Components */,
 				89725E3E2DB56CB7009EB095 /* AudioTestApp.swift */,
 				89725E402DB56CB7009EB095 /* ContentView.swift */,
+				89D65D4C2DB5D9EC002D2859 /* Theme.swift */,
 				89725E422DB56CB8009EB095 /* Assets.xcassets */,
 				89725E442DB56CB8009EB095 /* Preview Content */,
 			);
@@ -127,6 +142,23 @@
 			path = AudioTestUITests;
 			sourceTree = "<group>";
 		};
+		89725E692DB56F8B009EB095 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89D65D4A2DB5C28D002D2859 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				89D65D482DB5C28D002D2859 /* Knob.swift */,
+				89D65D502DB5E0FE002D2859 /* Fader.swift */,
+			);
+			name = Components;
+			path = AudioTest/Components;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,11 @@
 			dependencies = (
 			);
 			name = AudioTest;
+			packageProductDependencies = (
+				89725E6A2DB56F8B009EB095 /* AudioKit */,
+				89725E6E2DB5709C009EB095 /* AudioKitEX */,
+				89725E702DB5709C009EB095 /* SoundpipeAudioKit */,
+			);
 			productName = AudioTest;
 			productReference = 89725E3B2DB56CB7009EB095 /* AudioTest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +252,11 @@
 				Base,
 			);
 			mainGroup = 89725E322DB56CB7009EB095;
+			packageReferences = (
+				89725E682DB56E3B009EB095 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				89725E6C2DB5706E009EB095 /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+				89725E6D2DB5707A009EB095 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+			);
 			productRefGroup = 89725E3C2DB56CB7009EB095 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89725E412DB56CB7009EB095 /* ContentView.swift in Sources */,
+				89D65D4D2DB5D9EC002D2859 /* Theme.swift in Sources */,
+				89D65D4B2DB5C28D002D2859 /* Knob.swift in Sources */,
 				89725E3F2DB56CB7009EB095 /* AudioTestApp.swift in Sources */,
+				89D65D512DB5E0FE002D2859 /* Fader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +469,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AudioTest/Preview Content\"";
 				DEVELOPMENT_TEAM = C9XSN82EA9;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -437,6 +483,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MechanicalChild.AudioTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,6 +502,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AudioTest/Preview Content\"";
 				DEVELOPMENT_TEAM = C9XSN82EA9;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +516,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MechanicalChild.AudioTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +641,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89725E682DB56E3B009EB095 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.5;
+			};
+		};
+		89725E6C2DB5706E009EB095 /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitEX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+		89725E6D2DB5707A009EB095 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89725E6A2DB56F8B009EB095 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89725E682DB56E3B009EB095 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		89725E6E2DB5709C009EB095 /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89725E6C2DB5706E009EB095 /* XCRemoteSwiftPackageReference "AudioKitEX" */;
+			productName = AudioKitEX;
+		};
+		89725E702DB5709C009EB095 /* SoundpipeAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89725E6D2DB5707A009EB095 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
+			productName = SoundpipeAudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89725E332DB56CB7009EB095 /* Project object */;
 }

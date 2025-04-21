@@ -11,7 +11,12 @@ import SwiftUI
 struct AudioTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                Color.theme.bgPrimary
+                    .ignoresSafeArea() // Full-screen theme background
+                ContentView()
+            }
+            .preferredColorScheme(.dark) // Optional, but great for consistency
         }
     }
 }

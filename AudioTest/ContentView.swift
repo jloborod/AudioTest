@@ -13,10 +13,17 @@ class ToneEngine: ObservableObject {
 
         do {
             try engine.start()
-            fmOsc.start()
         } catch {
             print("AudioKit failed to start: \(error.localizedDescription)")
         }
+    }
+
+    func start() {
+        fmOsc.start()
+    }
+
+    func stop() {
+        fmOsc.stop()
     }
 
     func setFMFrequency(_ freq: AUValue) {
@@ -27,13 +34,18 @@ class ToneEngine: ObservableObject {
 struct ContentView: View {
     @StateObject var engine = ToneEngine()
     @State private var freq: AUValue = 440
+    @State private var isPlaying = false
 
     var freqBinding: Binding<Double> {
         Binding<Double>(
             get: { Double(freq) },
-            set: { freq = AUValue($0) }
+            set: {
+                freq = AUValue($0)
+                engine.setFMFrequency(freq)
+            }
         )
     }
+
     var body: some View {
         ZStack {
             Color.theme.bgPrimary.ignoresSafeArea()
@@ -43,12 +55,29 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.theme.textPrimary)
 
-                Fader(value: freqBinding, range: 100...1000, step: 1, label: "Freq")
+                // Play / Stop button
+                Button(action: {
+                    isPlaying.toggle()
+                    isPlaying ? engine.start() : engine.stop()
+                }) {
+                    Text(isPlaying ? "Stop" : "Play")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 120)
+                        .background(isPlaying ? Color.red : Color.green)
+                        .cornerRadius(12)
+                }
 
+                // Fader
+                Fader(value: freqBinding, range: 100...1000, step: 1, label: "Freq")
+                    .frame(width: 250, height: 40)
+
+                // Knob
                 Knob(
                     value: Binding(
                         get: { Double((freq - 100) / 900) },
-                        set: { freq = AUValue($0 * 900 + 100) }
+                        set: { freq = AUValue($0 * 900 + 100); engine.setFMFrequency(freq) }
                     ),
                     label: "Freq",
                     size: 100,
@@ -56,6 +85,7 @@ struct ContentView: View {
                 )
                 .frame(maxWidth: .infinity)
 
+                // Frequency text
                 Text("\(Int(freq)) Hz")
                     .font(.headline)
                     .foregroundColor(.theme.textSecondary)

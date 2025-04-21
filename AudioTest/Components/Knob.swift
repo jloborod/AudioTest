@@ -8,6 +8,7 @@ struct Knob: View {
 
     @GestureState private var dragAmount: CGSize = .zero
     @State private var lastValue: Double = 0
+    @State private var isFirstDrag = true
 
     var body: some View {
         VStack(spacing: 4) {
@@ -39,6 +40,11 @@ struct Knob: View {
                     state = value.translation
                 }
                 .onChanged { drag in
+                    if isFirstDrag {
+                        lastValue = value
+                        isFirstDrag = false
+                    }
+
                     let delta = -drag.translation.height
                     let scaledDelta = delta / 300.0
                     let newValue = min(max(lastValue + Double(scaledDelta), 0), 1)
@@ -46,6 +52,7 @@ struct Knob: View {
                 }
                 .onEnded { _ in
                     lastValue = value
+                    isFirstDrag = true
                 }
         )
     }

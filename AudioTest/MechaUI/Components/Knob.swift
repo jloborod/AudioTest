@@ -10,6 +10,8 @@ struct Knob: View {
     @State private var lastValue: Double = 0
     @State private var isFirstDrag = true
 
+    @Environment(\.theme) private var theme
+    
     var body: some View {
         VStack(spacing: 4) {
             ZStack {
@@ -19,18 +21,18 @@ struct Knob: View {
 
                 Circle()
                     .trim(from: 0.0, to: value)
-                    .stroke(Color.theme.accentPrimary, lineWidth: 4)
+                    .stroke(theme.accentPrimary, lineWidth: 4)
                     .rotationEffect(.degrees(-90))
                     .frame(width: size, height: size)
             }
 
             Text(label)
                 .font(.caption)
-                .foregroundColor(.theme.textSecondary)
+                .foregroundColor(theme.textSecondary)
 
             Text(displayValue ?? String(format: "%.0f", value * 100))
                 .font(.caption2)
-                .foregroundColor(.theme.textPrimary)
+                .foregroundColor(theme.textPrimary)
         }
         .frame(width: size, height: size + 30)
         .contentShape(Rectangle())

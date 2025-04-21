@@ -7,12 +7,14 @@ struct Fader: View {
     var label: String? = nil
     var isVertical: Bool = false
 
+    @Environment(\.theme) private var theme
+    
     var body: some View {
         VStack(spacing: 8) {
             if let label = label {
                 Text(label)
                     .font(.caption)
-                    .foregroundColor(.theme.textSecondary)
+                    .foregroundColor(theme.textSecondary)
             }
 
             GeometryReader { geo in
@@ -23,7 +25,7 @@ struct Fader: View {
 
                     // Track background
                     RoundedRectangle(cornerRadius: trackThickness / 2)
-                        .fill(Color.theme.bgSecondary)
+                        .fill(theme.bgSecondary)
                         .frame(
                             width: isVertical ? trackThickness : trackLength,
                             height: isVertical ? trackLength : trackThickness
@@ -33,7 +35,7 @@ struct Fader: View {
 
                     // Filled track
                     RoundedRectangle(cornerRadius: trackThickness / 2)
-                        .fill(Color.theme.accentPrimary)
+                        .fill(theme.accentPrimary)
                         .frame(
                             width: isVertical ? trackThickness : thumbOffset(in: trackLength),
                             height: isVertical ? thumbOffset(in: trackLength) : trackThickness
@@ -43,7 +45,7 @@ struct Fader: View {
 
                     // Thumb (static, no animation)
                     RoundedRectangle(cornerRadius: 4)
-                        .fill(Color.theme.accentPrimary)
+                        .fill(theme.accentPrimary)
                         .frame(width: thumbSize.width, height: thumbSize.height)
                         .position(
                             x: isVertical ? geo.size.width / 2 : thumbOffset(in: trackLength),

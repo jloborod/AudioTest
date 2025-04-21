@@ -17,9 +17,22 @@
 		89725E6B2DB56F8B009EB095 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E6A2DB56F8B009EB095 /* AudioKit */; };
 		89725E6F2DB5709C009EB095 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E6E2DB5709C009EB095 /* AudioKitEX */; };
 		89725E712DB5709C009EB095 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89725E702DB5709C009EB095 /* SoundpipeAudioKit */; };
-		89D65D4B2DB5C28D002D2859 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D482DB5C28D002D2859 /* Knob.swift */; };
-		89D65D4D2DB5D9EC002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D4C2DB5D9EC002D2859 /* Theme.swift */; };
-		89D65D512DB5E0FE002D2859 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D502DB5E0FE002D2859 /* Fader.swift */; };
+		89D65D4D2DB5D9EC002D2859 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D4C2DB5D9EC002D2859 /* AppTheme.swift */; };
+		89D65D612DB6968E002D2859 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5E2DB6968E002D2859 /* Fader.swift */; };
+		89D65D622DB6968E002D2859 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5E2DB6968E002D2859 /* Fader.swift */; };
+		89D65D632DB6968E002D2859 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5E2DB6968E002D2859 /* Fader.swift */; };
+		89D65D642DB6968E002D2859 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5F2DB6968E002D2859 /* Knob.swift */; };
+		89D65D652DB6968E002D2859 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5F2DB6968E002D2859 /* Knob.swift */; };
+		89D65D662DB6968E002D2859 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D5F2DB6968E002D2859 /* Knob.swift */; };
+		89D65D6B2DB69B93002D2859 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D672DB69B93002D2859 /* DefaultTheme.swift */; };
+		89D65D6C2DB69B93002D2859 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D672DB69B93002D2859 /* DefaultTheme.swift */; };
+		89D65D6D2DB69B93002D2859 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D672DB69B93002D2859 /* DefaultTheme.swift */; };
+		89D65D6E2DB69B93002D2859 /* Environment+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D682DB69B93002D2859 /* Environment+Theme.swift */; };
+		89D65D6F2DB69B93002D2859 /* Environment+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D682DB69B93002D2859 /* Environment+Theme.swift */; };
+		89D65D702DB69B93002D2859 /* Environment+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D682DB69B93002D2859 /* Environment+Theme.swift */; };
+		89D65D712DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
+		89D65D722DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
+		89D65D732DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +63,12 @@
 		89725E552DB56CB8009EB095 /* AudioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89725E592DB56CB8009EB095 /* AudioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTestUITests.swift; sourceTree = "<group>"; };
 		89725E5B2DB56CB8009EB095 /* AudioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		89D65D482DB5C28D002D2859 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
-		89D65D4C2DB5D9EC002D2859 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		89D65D502DB5E0FE002D2859 /* Fader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
+		89D65D4C2DB5D9EC002D2859 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		89D65D5E2DB6968E002D2859 /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
+		89D65D5F2DB6968E002D2859 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		89D65D672DB69B93002D2859 /* DefaultTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		89D65D682DB69B93002D2859 /* Environment+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Theme.swift"; sourceTree = "<group>"; };
+		89D65D692DB69B93002D2859 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +123,10 @@
 		89725E3D2DB56CB7009EB095 /* AudioTest */ = {
 			isa = PBXGroup;
 			children = (
-				89D65D4A2DB5C28D002D2859 /* Components */,
+				89D65D572DB6963F002D2859 /* MechaUI */,
 				89725E3E2DB56CB7009EB095 /* AudioTestApp.swift */,
 				89725E402DB56CB7009EB095 /* ContentView.swift */,
-				89D65D4C2DB5D9EC002D2859 /* Theme.swift */,
+				89D65D4C2DB5D9EC002D2859 /* AppTheme.swift */,
 				89725E422DB56CB8009EB095 /* Assets.xcassets */,
 				89725E442DB56CB8009EB095 /* Preview Content */,
 			);
@@ -149,15 +165,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		89D65D4A2DB5C28D002D2859 /* Components */ = {
+		89D65D572DB6963F002D2859 /* MechaUI */ = {
 			isa = PBXGroup;
 			children = (
-				89D65D482DB5C28D002D2859 /* Knob.swift */,
-				89D65D502DB5E0FE002D2859 /* Fader.swift */,
+				89D65D6A2DB69B93002D2859 /* Theme */,
+				89D65D602DB6968E002D2859 /* Components */,
 			);
-			name = Components;
-			path = AudioTest/Components;
-			sourceTree = SOURCE_ROOT;
+			path = MechaUI;
+			sourceTree = "<group>";
+		};
+		89D65D602DB6968E002D2859 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				89D65D5E2DB6968E002D2859 /* Fader.swift */,
+				89D65D5F2DB6968E002D2859 /* Knob.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		89D65D6A2DB69B93002D2859 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				89D65D672DB69B93002D2859 /* DefaultTheme.swift */,
+				89D65D682DB69B93002D2859 /* Environment+Theme.swift */,
+				89D65D692DB69B93002D2859 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -299,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D65D612DB6968E002D2859 /* Fader.swift in Sources */,
+				89D65D712DB69B93002D2859 /* Theme.swift in Sources */,
 				89725E412DB56CB7009EB095 /* ContentView.swift in Sources */,
-				89D65D4D2DB5D9EC002D2859 /* Theme.swift in Sources */,
-				89D65D4B2DB5C28D002D2859 /* Knob.swift in Sources */,
+				89D65D642DB6968E002D2859 /* Knob.swift in Sources */,
+				89D65D6B2DB69B93002D2859 /* DefaultTheme.swift in Sources */,
+				89D65D6E2DB69B93002D2859 /* Environment+Theme.swift in Sources */,
+				89D65D4D2DB5D9EC002D2859 /* AppTheme.swift in Sources */,
 				89725E3F2DB56CB7009EB095 /* AudioTestApp.swift in Sources */,
-				89D65D512DB5E0FE002D2859 /* Fader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D65D622DB6968E002D2859 /* Fader.swift in Sources */,
+				89D65D6F2DB69B93002D2859 /* Environment+Theme.swift in Sources */,
+				89D65D6C2DB69B93002D2859 /* DefaultTheme.swift in Sources */,
+				89D65D722DB69B93002D2859 /* Theme.swift in Sources */,
+				89D65D652DB6968E002D2859 /* Knob.swift in Sources */,
 				89725E502DB56CB8009EB095 /* AudioTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,8 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D65D6D2DB69B93002D2859 /* DefaultTheme.swift in Sources */,
+				89D65D632DB6968E002D2859 /* Fader.swift in Sources */,
 				89725E5A2DB56CB8009EB095 /* AudioTestUITests.swift in Sources */,
+				89D65D702DB69B93002D2859 /* Environment+Theme.swift in Sources */,
 				89725E5C2DB56CB8009EB095 /* AudioTestUITestsLaunchTests.swift in Sources */,
+				89D65D662DB6968E002D2859 /* Knob.swift in Sources */,
+				89D65D732DB69B93002D2859 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

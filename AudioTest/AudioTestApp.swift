@@ -1,10 +1,3 @@
-//
-//  AudioTestApp.swift
-//  AudioTest
-//
-//  Created by Joaquín Lobo Rodríguez on 20/4/25.
-//
-
 import SwiftUI
 
 @main
@@ -15,6 +8,7 @@ struct AudioTestApp: App {
                 Color.theme.bgPrimary
                     .ignoresSafeArea() // Full-screen theme background
                 ContentView()
+                .environment(\.theme, AppTheme())
             }
             .preferredColorScheme(.dark) // Optional, but great for consistency
         }

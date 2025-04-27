@@ -33,6 +33,9 @@
 		89D65D712DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
 		89D65D722DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
 		89D65D732DB69B93002D2859 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D65D692DB69B93002D2859 /* Theme.swift */; };
+		89F5F8FC2DB9B816000A66F8 /* KickEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5F8FA2DB9B816000A66F8 /* KickEngine.swift */; };
+		89F5F8FE2DB9B848000A66F8 /* KickEngineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5F8FD2DB9B848000A66F8 /* KickEngineUI.swift */; };
+		89F5F9002DB9BA5B000A66F8 /* ContentViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5F8FF2DB9BA5B000A66F8 /* ContentViewBackup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		89D65D672DB69B93002D2859 /* DefaultTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		89D65D682DB69B93002D2859 /* Environment+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Theme.swift"; sourceTree = "<group>"; };
 		89D65D692DB69B93002D2859 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		89F5F8FA2DB9B816000A66F8 /* KickEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KickEngine.swift; sourceTree = "<group>"; };
+		89F5F8FD2DB9B848000A66F8 /* KickEngineUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KickEngineUI.swift; sourceTree = "<group>"; };
+		89F5F8FF2DB9BA5B000A66F8 /* ContentViewBackup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewBackup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 		89725E3D2DB56CB7009EB095 /* AudioTest */ = {
 			isa = PBXGroup;
 			children = (
+				89F5F8FF2DB9BA5B000A66F8 /* ContentViewBackup.swift */,
+				89F5F8FD2DB9B848000A66F8 /* KickEngineUI.swift */,
+				89F5F8FB2DB9B816000A66F8 /* DSPEngines */,
 				89D65D572DB6963F002D2859 /* MechaUI */,
 				89725E3E2DB56CB7009EB095 /* AudioTestApp.swift */,
 				89725E402DB56CB7009EB095 /* ContentView.swift */,
@@ -191,6 +200,14 @@
 				89D65D692DB69B93002D2859 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		89F5F8FB2DB9B816000A66F8 /* DSPEngines */ = {
+			isa = PBXGroup;
+			children = (
+				89F5F8FA2DB9B816000A66F8 /* KickEngine.swift */,
+			);
+			path = DSPEngines;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +351,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D65D612DB6968E002D2859 /* Fader.swift in Sources */,
+				89F5F8FE2DB9B848000A66F8 /* KickEngineUI.swift in Sources */,
 				89D65D712DB69B93002D2859 /* Theme.swift in Sources */,
+				89F5F9002DB9BA5B000A66F8 /* ContentViewBackup.swift in Sources */,
 				89725E412DB56CB7009EB095 /* ContentView.swift in Sources */,
+				89F5F8FC2DB9B816000A66F8 /* KickEngine.swift in Sources */,
 				89D65D642DB6968E002D2859 /* Knob.swift in Sources */,
 				89D65D6B2DB69B93002D2859 /* DefaultTheme.swift in Sources */,
 				89D65D6E2DB69B93002D2859 /* Environment+Theme.swift in Sources */,
